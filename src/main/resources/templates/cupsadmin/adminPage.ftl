@@ -51,6 +51,7 @@
                         <label>Handle</label>
                         <br/>
                         <input class="w3-button w3-teal w3-margin"  type="submit" value="Update"/>
+                        <input type="hidden" name="id" value="${cupToUpdate.getId()}" />
                     </form>
                 </div>
             </#if>
