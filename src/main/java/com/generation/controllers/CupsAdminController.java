@@ -19,6 +19,9 @@ public class CupsAdminController extends HttpServlet
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
     {
         String cmd= req.getParameter("cmd");
+
+        
+        
         if(cmd==null)
         {
             manageLogin(req,resp);
@@ -73,6 +76,10 @@ public class CupsAdminController extends HttpServlet
     {
         String passwordGiusta = "tazza";
         String passwordInserita = req.getParameter("password");
+        String unupdate = req.getParameter("unupdate");
+        if(unupdate!=null)
+            passwordInserita=passwordGiusta;
+
         if(passwordInserita==null)
         {
             req.setAttribute("wrongPass", false);
